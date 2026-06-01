@@ -32,15 +32,18 @@ body {
 
 
 /* =========================
-   NAV (DESKTOP)
+   NAV (DESKTOP FIXED)
 ========================= */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     background: rgba(139,0,0,0.95);
+
     display: flex;
+    justify-content: space-between;   /* KEY FIX */
     align-items: center;
+
     padding: 15px 40px;
     z-index: 1000;
 }
@@ -50,7 +53,7 @@ nav {
     font-weight: bold;
 }
 
-/* push nav links right */
+/* push nav links to right on desktop */
 nav ul {
     display: flex;
     gap: 20px;
@@ -72,7 +75,8 @@ nav a {
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    margin-left: 15px;
+
+    margin-left: auto;   /* KEY FIX for alignment */
 }
 
 
@@ -225,10 +229,6 @@ footer {
     position: relative;
 }
 
-
-/* =========================
-   CLOSE MODAL BUTTON (FIXED FOR MOBILE)
-========================= */
 .close-modal {
     position: sticky;
     top: 0;
@@ -272,7 +272,7 @@ footer {
 
 
 /* =========================
-   📱 MOBILE NAV FIX (FINAL CLEAN VERSION)
+   📱 MOBILE NAV FIX (FINAL)
 ========================= */
 @media (max-width: 768px) {
 
