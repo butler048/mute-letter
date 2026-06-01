@@ -19,7 +19,7 @@ body {
 
 
 /* =========================
-   HEARTS BG
+   HEART BACKGROUND
 ========================= */
 .hearts {
     position: fixed;
@@ -32,7 +32,7 @@ body {
 
 
 /* =========================
-   NAV (DESKTOP)
+   NAV (DESKTOP BASE)
 ========================= */
 nav {
     position: fixed;
@@ -40,26 +40,40 @@ nav {
     width: 100%;
     background: rgba(139,0,0,0.95);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
     z-index: 1000;
 }
 
+/* logo left */
 .logo {
     color: white;
     font-weight: bold;
 }
 
+/* push menu to the right */
 nav ul {
     display: flex;
     gap: 20px;
     list-style: none;
+    margin-left: auto;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+}
+
+
+/* =========================
+   HAMBURGER ICON
+========================= */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
 }
 
 
@@ -131,7 +145,6 @@ button {
     font-size: 3rem;
     font-family: 'Dancing Script', cursive;
     color: #b22222;
-    margin-bottom: 20px;
 }
 
 .photos {
@@ -155,7 +168,6 @@ button {
     transform: scale(1.05);
 }
 
-/* CAPTIONS (your original style restored) */
 .caption {
     position: absolute;
     bottom: 0;
@@ -191,7 +203,7 @@ footer {
 
 
 /* =========================
-   MODAL (LETTER POPUP)
+   MODAL
 ========================= */
 .modal {
     display: none;
@@ -239,11 +251,8 @@ footer {
 .lightbox img {
     max-width: 90vw;
     max-height: 90vh;
-    width: auto;
-    height: auto;
     object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 #closeLightbox {
@@ -257,21 +266,13 @@ footer {
 
 
 /* =========================
-   📱 MOBILE NAV (NEW FIX)
+   📱 MOBILE NAV FIX (REAL DROPDOWN)
 ========================= */
-
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
 @media (max-width: 768px) {
 
     nav {
-        padding: 15px 20px;
         flex-wrap: wrap;
+        padding: 15px 20px;
     }
 
     .menu-toggle {
@@ -282,11 +283,11 @@ footer {
         display: none;
         width: 100%;
         flex-direction: column;
-        gap: 15px;
-        margin-top: 15px;
         background: rgba(139,0,0,0.98);
+        margin-top: 15px;
         padding: 15px;
         border-radius: 10px;
+        gap: 15px;
     }
 
     nav ul.active {
@@ -295,5 +296,6 @@ footer {
 
     nav ul li {
         text-align: center;
+        padding: 10px 0;
     }
 }
