@@ -30,10 +30,10 @@ const song = document.getElementById("song");
 musicBtn.addEventListener("click", () => {
     if (song.paused) {
         song.play();
-        musicBtn.textContent = "⏸ Pause Music";
+        musicBtn.textContent = "Pause Music";
     } else {
         song.pause();
-        musicBtn.textContent = "🎵 Play Music";
+        musicBtn.textContent = " Play Music";
     }
 });
 

@@ -32,7 +32,7 @@ body {
 
 
 /* =========================
-   NAV (DESKTOP BASE)
+   NAV (DESKTOP)
 ========================= */
 nav {
     position: fixed;
@@ -45,13 +45,12 @@ nav {
     z-index: 1000;
 }
 
-/* logo left */
 .logo {
     color: white;
     font-weight: bold;
 }
 
-/* push menu to the right */
+/* push nav links right */
 nav ul {
     display: flex;
     gap: 20px;
@@ -223,14 +222,21 @@ footer {
     width: 80%;
     max-height: 80vh;
     overflow-y: auto;
+    position: relative;
 }
 
-#closeModal {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
+
+/* =========================
+   CLOSE MODAL BUTTON (FIXED FOR MOBILE)
+========================= */
+.close-modal {
+    position: sticky;
+    top: 0;
+    float: right;
+    font-size: 2.5rem;
     cursor: pointer;
+    color: #b22222;
+    padding: 5px 10px;
 }
 
 
@@ -266,7 +272,7 @@ footer {
 
 
 /* =========================
-   📱 MOBILE NAV FIX (REAL DROPDOWN)
+   📱 MOBILE NAV FIX (FINAL CLEAN VERSION)
 ========================= */
 @media (max-width: 768px) {
 
