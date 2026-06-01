@@ -1,3 +1,6 @@
+/* =========================
+   RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +17,10 @@ body {
     color: #3b1f1f;
 }
 
-/* HEARTS BG */
+
+/* =========================
+   HEARTS BG
+========================= */
 .hearts {
     position: fixed;
     inset: 0;
@@ -24,7 +30,10 @@ body {
     z-index: -1;
 }
 
-/* NAV */
+
+/* =========================
+   NAV (DESKTOP)
+========================= */
 nav {
     position: fixed;
     top: 0;
@@ -32,9 +41,11 @@ nav {
     background: rgba(139,0,0,0.95);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 40px;
     z-index: 1000;
 }
+
 .logo {
     color: white;
     font-weight: bold;
@@ -51,7 +62,10 @@ nav a {
     text-decoration: none;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 .hero {
     height: 100vh;
     background: url("images/image1.jpg") center/cover no-repeat;
@@ -87,7 +101,10 @@ button {
     cursor: pointer;
 }
 
-/* LETTER SECTION */
+
+/* =========================
+   LETTER SECTION
+========================= */
 .letter {
     max-width: 900px;
     margin: 80px auto;
@@ -101,17 +118,21 @@ button {
     line-height: 1.6;
 }
 
-/* GALLERY */
+
+/* =========================
+   GALLERY
+========================= */
 .gallery {
     padding: 50px;
 }
+
 .gallery h2 {
     text-align: center;
     font-size: 3rem;
     font-family: 'Dancing Script', cursive;
     color: #b22222;
+    margin-bottom: 20px;
 }
-
 
 .photos {
     display: grid;
@@ -134,7 +155,7 @@ button {
     transform: scale(1.05);
 }
 
-/* CAPTION FADE */
+/* CAPTIONS (your original style restored) */
 .caption {
     position: absolute;
     bottom: 0;
@@ -143,28 +164,35 @@ button {
     color: white;
     padding: 10px;
     opacity: 0;
-    transform: translateY(10px);
     transition: 0.3s ease;
 }
 
 .photo:hover .caption {
     opacity: 1;
-    transform: translateY(0);
 }
 
-/* MUSIC */
+
+/* =========================
+   MUSIC
+========================= */
 .music-section {
     text-align: center;
     padding: 60px;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 40px;
 }
 
-/* MODAL */
+
+/* =========================
+   MODAL (LETTER POPUP)
+========================= */
 .modal {
     display: none;
     position: fixed;
@@ -193,7 +221,10 @@ footer {
     cursor: pointer;
 }
 
-/* LIGHTBOX */
+
+/* =========================
+   LIGHTBOX
+========================= */
 .lightbox {
     display: none;
     position: fixed;
@@ -215,7 +246,6 @@ footer {
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-/* CLOSE BUTTON */
 #closeLightbox {
     position: absolute;
     top: 20px;
@@ -223,4 +253,47 @@ footer {
     font-size: 3rem;
     color: white;
     cursor: pointer;
+}
+
+
+/* =========================
+   📱 MOBILE NAV (NEW FIX)
+========================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        background: rgba(139,0,0,0.98);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
 }
